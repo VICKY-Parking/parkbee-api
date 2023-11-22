@@ -23,6 +23,10 @@ jobs:
           echo PPM_CLIENT_SECRET=${{ secrets.PPM_CLIENT_SECRET }} >> .env.test
           echo PREPAID_CLIENT_ID=${{ vars.PREPAID_CLIENT_ID }} >> .env.test
           echo PREPAID_CLIENT_SECRET=${{ secrets.PREPAID_CLIENT_SECRET }} >> .env.test
+      
+      - name: Cat Environment Variables
+        run: |
+          cat .env.test
         
       - name: Checkout Repository
         uses: actions/checkout@v3
