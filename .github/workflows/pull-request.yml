@@ -16,17 +16,17 @@ jobs:
         
       - name: Create Environment Variables
         run: |
-          touch .env
-          echo AUTH_URL=${{ vars.AUTH_URL }} >> .env
-          echo API_URL=${{ vars.API_URL }} >> .env
-          echo PPM_CLIENT_ID=${{ vars.PPM_CLIENT_ID }} >> .env
-          echo PPM_CLIENT_SECRET=${{ secrets.PPM_CLIENT_SECRET }} >> .env
-          echo PREPAID_CLIENT_ID=${{ vars.PREPAID_CLIENT_ID }} >> .env
-          echo PREPAID_CLIENT_SECRET=${{ secrets.PREPAID_CLIENT_SECRET }} >> .env
+          touch ../.env.test
+          echo AUTH_URL=${{ vars.AUTH_URL }} >> ../.env.test
+          echo API_URL=${{ vars.API_URL }} >> ../.env.test
+          echo PPM_CLIENT_ID=${{ vars.PPM_CLIENT_ID }} >> ../.env.test
+          echo PPM_CLIENT_SECRET=${{ secrets.PPM_CLIENT_SECRET }} >> ../.env.test
+          echo PREPAID_CLIENT_ID=${{ vars.PREPAID_CLIENT_ID }} >> ../.env.test
+          echo PREPAID_CLIENT_SECRET=${{ secrets.PREPAID_CLIENT_SECRET }} >> ../.env.test
       
       - name: Cat Environment Variables
         run: |
-          cat .env
+          cat ../.env.test
         
       - name: Checkout Repository
         uses: actions/checkout@v3
