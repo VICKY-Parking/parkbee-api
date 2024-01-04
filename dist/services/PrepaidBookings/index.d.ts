@@ -1,6 +1,7 @@
 import BaseService from "../Base";
 import { CreateOverstayRecordParams, CreatePrepaidBookingParams, CreatePrepaidBookingResponse, GetBookingDetailsResponse, RefundBookingParams, StartParkingActionParams, StopParkingActionParams, CalculatePriceParams, CalculatePriceResponse, CreateOverstayRecordResponse } from "./types";
 declare class PrepaidBookingsService extends BaseService {
+    constructor(apiUrl: string, token: string);
     createBooking(params: CreatePrepaidBookingParams): Promise<CreatePrepaidBookingResponse>;
     confirmBooking(bookingId: string, paymentToken: string): Promise<void>;
     getBookingDetails(bookingId: string): Promise<GetBookingDetailsResponse>;
