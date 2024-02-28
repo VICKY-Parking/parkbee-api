@@ -117,9 +117,9 @@ class PrepaidBookingsService extends Base_1.default {
             }
         });
     }
-    createOverstayRecord(bookingId, params) {
+    createOverstayRecord(bookingId, accessSlotId, params) {
         return __awaiter(this, void 0, void 0, function* () {
-            const url = `${this.apiUrl}/bookings/${bookingId}/access_slots/overstays`;
+            const url = `${this.apiUrl}/bookings/${bookingId}/access_slots/${accessSlotId}/overstays`;
             try {
                 const res = yield this.sendPostRequest(url, params);
                 return res.data;

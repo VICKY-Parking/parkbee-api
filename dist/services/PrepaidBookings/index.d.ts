@@ -10,7 +10,7 @@ declare class PrepaidBookingsService extends BaseService {
     startParkingAction(bookingId: string, accessSlotId: string, params: StartParkingActionParams): Promise<void>;
     stopParkingAction(bookingId: string, accessSlotId: string, params: StopParkingActionParams): Promise<void>;
     openPedestrianDoor(bookingId: string, accessSlotId: string, doorId: string): Promise<void>;
-    createOverstayRecord(bookingId: string, params?: CreateOverstayRecordParams): Promise<CreateOverstayRecordResponse>;
+    createOverstayRecord(bookingId: string, accessSlotId: string, params?: CreateOverstayRecordParams): Promise<CreateOverstayRecordResponse>;
     confirmOverstayRecord(bookingId: string, accessSlotId: string, overstayId: string): Promise<void>;
     calculatePrice(params: CalculatePriceParams): Promise<CalculatePriceResponse>;
 }
