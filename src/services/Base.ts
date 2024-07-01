@@ -62,6 +62,18 @@ class BaseService {
             message = "Request failed";
           }
           break;
+        case 403:
+          message = "Forbidden";
+          break;
+          case 408:
+          message = "Request timeout";
+          break;
+        case 429:
+          message = "Too many requests";
+          break;
+        case 500:
+          message = "Internal server error";
+          break;
         default:
           message = "Request failed with unknown reason";
           break;
