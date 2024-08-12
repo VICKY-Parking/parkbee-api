@@ -3,7 +3,7 @@ import { RefundParkingTransactionParams, StartParkingTransactionParams, StartPar
 declare class PayPerMinuteParkingService extends BaseService {
     constructor(apiUrl: string, token: string);
     startParkingTransaction(params: StartParkingTransactionParams): Promise<StartParkingTransactionResponse>;
-    stopParkingTransaction(transactionId: string, params: StopParkingTransactionParams): Promise<StopParkingTransactionResponse>;
+    stopParkingTransaction(transactionId: string, params?: StopParkingTransactionParams): Promise<StopParkingTransactionResponse>;
     refundParkingTransaction(transactionId: string, params: RefundParkingTransactionParams): Promise<void>;
 }
 export default PayPerMinuteParkingService;
