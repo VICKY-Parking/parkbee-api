@@ -30,7 +30,7 @@ class PayPerMinuteParkingService extends BaseService {
 
   async stopParkingTransaction(
     transactionId: string,
-    params: StopParkingTransactionParams
+    params?: StopParkingTransactionParams
   ): Promise<StopParkingTransactionResponse> {
     const url = `${this.apiUrl}/parkingtransactions/${transactionId}/stop`;
     try {
